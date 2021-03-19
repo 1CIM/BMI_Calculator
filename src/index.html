@@ -8,10 +8,10 @@
 </head>
 <body>
   <h1>BMI Calculator</h1>
-  <input type="text" id="weight" placeholder="Your weight in kg">
-  <input type="text" id="height" placeholder="Your height in cm">
+  <input type="text" name="weight" id="weightInKg" placeholder="Your weight in kg" value="weight in kg" required>
+  <input type="text" name="height" id="heightInCm" placeholder="Your height in cm" value="height in cm" required>
   <button id="calculate" onclick="calculateBMI()" >Calculate</button>
-  <div id="results"></div>
+  <div name="results" id="results"></div>
   
   <script src="./assets/bmi_calculator.js"></script>
   <script src="./assets/ui_bmi_calculator.js"></script>
