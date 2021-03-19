@@ -23,4 +23,33 @@ describe('User can check their Bmi', () => {
       cy.get('#results').should('contain.text', 'Normalweight')
     });
   });
+
+  describe('User click Imperial button to go to imperial site', () => {
+
+    before(() => {
+      cy.get('#imperial').click()
+    });
+
+    it('is expected to show header with imperial bmi calculator', () =>{
+      cy.get('h1').should('contain.text', 'Imperial BMI Calculator')
+    });
+
+    before(() => {
+      cy.get('#weightInLbs').type('202')
+      cy.get('#heightInInch').type('77.5')
+      cy.get('#impCalculate').click()
+    });
+
+    it('display a BMI value of 23.6', () => {
+      cy.get('#impResults').should('contain.text', '23.6')
+    });
+    it('displays a message of what class you are in', () => {
+      cy.get('#impResults').should('contain.text', 'Normalweight')
+    });
+
+    it('gose back to metric page', () => {
+      cy.get('#metricPage').click()
+    });
+  });
 }); 
+
