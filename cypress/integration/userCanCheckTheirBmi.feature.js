@@ -1,5 +1,5 @@
 describe('User can check their Bmi', () => {
-
+  
   before(() => {
     cy.visit('http://localhost:3001')
   });
@@ -9,6 +9,7 @@ describe('User can check their Bmi', () => {
   });
 
   describe('user can enter weight and height', () => {
+  
     before(() => {
       cy.get('#weightInKg').type('92')
       cy.get('#heightInCm').type('197')
@@ -16,7 +17,10 @@ describe('User can check their Bmi', () => {
     });
 
     it('displays a BMI value of 23.71', () => {
-      cy.get('div[name=results]').should('contain.text', '23.71')
+      cy.get('#results').should('contain.text', '23.71')
+    });
+    it('displays a message of what class you are in', () => {
+      cy.get('#results').should('contain.text', 'Normal')
     });
   });
 });

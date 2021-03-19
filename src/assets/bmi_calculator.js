@@ -4,3 +4,9 @@ const bmiCalculator = {
     return bmiValue.toFixed(2)
   }
 }
+
+const bmiClassification = (bmiValue) => {
+  if (bmiValue < 18.5) {
+    return "You are"
+  }
+}
