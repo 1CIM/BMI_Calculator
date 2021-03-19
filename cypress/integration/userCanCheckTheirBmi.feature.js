@@ -23,4 +23,16 @@ describe('User can check their Bmi', () => {
       cy.get('#results').should('contain.text', 'Normalweight')
     });
   });
+
+  describe('User click Imperial button to go to imperial site', () => {
+
+    before(() => {
+      cy.get('#imperial').click()
+    });
+    
+    it('is expected to show header with imperial bmi calculator', () =>{
+      cy.get('h1').should('contain.text', 'Imperial BMI Calculator')
+    });
+  });
 }); 
+
