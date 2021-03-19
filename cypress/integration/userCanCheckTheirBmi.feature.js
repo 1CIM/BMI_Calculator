@@ -36,12 +36,19 @@ describe('User can check their Bmi', () => {
 
     before(() => {
       cy.get('#weightInLbs').type('202')
-      cy.get('#heightInInches').type('77.5')
+      cy.get('#heightInInch').type('77.5')
       cy.get('#impCalculate').click()
     });
 
-    it('display a BMI value of 23.7', () => {
-      cy.get('impResults').should('contain.text', '23.7')
+    it('display a BMI value of 23.6', () => {
+      cy.get('#impResults').should('contain.text', '23.6')
+    });
+    it('displays a message of what class you are in', () => {
+      cy.get('#impResults').should('contain.text', 'Normalweight')
+    });
+
+    it('gose back to metric page', () => {
+      cy.get('#metricPage').click()
     });
   });
 }); 
