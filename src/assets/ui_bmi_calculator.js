@@ -1,7 +1,10 @@
-const calculateBMI = () => {
-  let weightInput = document.getElementById("weight");
-  let heightInput = document.getElementById("height");
-  let results = calculatemMetricBMI(weightInput.value, heightInput.value)
-  let displayResultsElement = document.getElementById('results')
-  displayResultsElement.innerHTML = `<h1>Your BMI value is: ${results}!<h1>`
-}
+const calculateBMI = document.getElementById('calculate')
+const resultNode = document.getElementById('results')
+
+calculateBMI.addEventListener('click', () => {
+  const weightInput = document.getElementById("weightInKg");
+  const heightInput = document.getElementById("heightInCm");
+  const bmiValue = bmiCalculator.calculate(weightInput.value, heightInput.value)
+  resultNode.innerHTML = `Your BMI value is: ${bmiValue} !`
+});
+ 
