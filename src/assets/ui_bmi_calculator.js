@@ -1,5 +1,8 @@
 const calculateBMI = document.getElementById('calculate')
 const resultNode = document.getElementById('results')
+const imperialBtn = document.getElementById('imperial').onclick = () => {
+  location.href = "./imperialbmi.html"
+}
 
 calculateBMI.addEventListener('click', () => {
   const weightInput = document.getElementById("weightInKg");
