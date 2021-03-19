@@ -16,11 +16,11 @@ describe('User can check their Bmi', () => {
       cy.get('#calculate').click()
     });
 
-    it('displays a BMI value of 23.71', () => {
-      cy.get('#results').should('contain.text', '23.71')
+    it('displays a BMI value of 23.7', () => {
+      cy.get('#results').should('contain.text', '23.7')
     });
     it('displays a message of what class you are in', () => {
-      cy.get('#results').should('contain.text', 'Normal')
+      cy.get('#results').should('contain.text', 'Normalweight')
     });
   });
-});
+}); 
