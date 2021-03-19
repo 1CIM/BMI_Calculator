@@ -29,9 +29,19 @@ describe('User can check their Bmi', () => {
     before(() => {
       cy.get('#imperial').click()
     });
-    
+
     it('is expected to show header with imperial bmi calculator', () =>{
       cy.get('h1').should('contain.text', 'Imperial BMI Calculator')
+    });
+
+    before(() => {
+      cy.get('#weightInLbs').type('202')
+      cy.get('#heightInInches').type('77.5')
+      cy.get('#impCalculate').click()
+    });
+
+    it('display a BMI value of 23.7', () => {
+      cy.get('impResults').should('contain.text', '23.7')
     });
   });
 }); 
