@@ -1,7 +1,7 @@
 const impCalculateBMI = document.getElementById('impCalculate')
 const impResultNode = document.getElementById('impResults')
 const imperialBtn = document.getElementById('metricPage').onclick = () => {
-  location.href = "./index.html"
+  location.href = "../index.html"
 }
 
 impCalculateBMI.addEventListener('click', () => {

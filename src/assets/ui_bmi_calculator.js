@@ -1,7 +1,7 @@
 const calculateBMI = document.getElementById('calculate')
 const resultNode = document.getElementById('results')
 const imperialBtn = document.getElementById('imperial').onclick = () => {
-  location.href = "./imperialbmi.html"
+  location.href = "./src/imperialbmi.html"
 }
 
 calculateBMI.addEventListener('click', () => {
