@@ -136,6 +136,10 @@ input[type='text']{
     padding: 40px 500px;
     font-size: 1.5rem;
 }
+input{
+    border: none;
+    border-radius: 10px;
+}
 
 .calculateBtn{
     background-color: darkgreen;
